@@ -29,6 +29,11 @@ jobs:
         with:
           node-version: 'latest'
 
+      - name: setup go
+        uses: actions/setup-go@main
+        with:
+          go-version: 'stable'
+
       - name: processing
         env:
           GH_TOKEN: ${{ github.token }}
