@@ -1,5 +1,5 @@
 module dccli
 
-go 1.19
+go 1.25.4
 
-require github.com/gek64/displayController v1.0.2
+require github.com/unix755/displayController v1.0.3

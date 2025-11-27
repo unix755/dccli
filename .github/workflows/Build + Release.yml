@@ -39,7 +39,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           # building and compressing
-          git clone https://github.com/gek64/gobd
+          git clone https://github.com/unix755/gobd
           go build -C gobd -o "../gobd_runner"
           chmod +x ./gobd_runner
           ./gobd_runner -main -d bin -no_debug -no_cgo

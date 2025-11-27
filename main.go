@@ -121,15 +121,6 @@ Example:
 	}
 }
 
-func showChangelog() {
-	var versionInfo = `Changelog:
-  1.00:
-    - First release
-  1.0.1:
-    - Compatible to displayController v1.01`
-	fmt.Println(versionInfo)
-}
-
 func main() {
 	if cliShowDisplay {
 		if cliUseHandle {

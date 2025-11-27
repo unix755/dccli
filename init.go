@@ -1,8 +1,9 @@
 package main
 
 import (
-	"github.com/gek64/displayController"
 	"log"
+
+	"github.com/unix755/displayController"
 )
 
 var (

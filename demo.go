@@ -3,13 +3,14 @@ package main
 import (
 	"bufio"
 	"fmt"
-	"github.com/gek64/displayController"
 	"os"
 	"os/exec"
 	"runtime"
 	"strconv"
 	"strings"
 	"syscall"
+
+	"github.com/unix755/displayController"
 )
 
 var (
@@ -71,12 +72,12 @@ func showBasicInfo() (err error) {
 		fmt.Printf(LANG[2], monitor.PhysicalInfo.Handle)
 		fmt.Printf(LANG[3], monitor.PhysicalInfo.Description)
 
-		current, max, err := displayController.GetVCPFeatureAndVCPFeatureReply(monitor.PhysicalInfo.Handle, displayController.Brightness)
+		currentValue, maxValue, err := displayController.GetVCPFeatureAndVCPFeatureReply(monitor.PhysicalInfo.Handle, displayController.Brightness)
 		if err != nil {
 			return err
 		}
 
-		fmt.Printf(LANG[4], current, max)
+		fmt.Printf(LANG[4], currentValue, maxValue)
 		fmt.Println()
 	}
 	return nil

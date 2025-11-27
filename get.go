@@ -2,8 +2,9 @@ package main
 
 import (
 	"fmt"
-	"github.com/gek64/displayController"
 	"syscall"
+
+	"github.com/unix755/displayController"
 )
 
 func getDisplayByHandle(handle int, vcpCode byte) (err error) {
