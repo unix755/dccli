@@ -10,9 +10,4 @@ chmod +x ./gobd_runner
 gh release list | awk -F '\t' '{print $3}' | while read -r line; do gh release delete --yes --cleanup-tag "$line"; done
 
 # create release
-if [ "${{ inputs.version }}" != "" ]; then
-  tag="${{ inputs.version }}"
-else
-  tag="$(go run . -v)"
-fi
-gh release create "$tag" --generate-notes "bin/*"
+gh release create "$(go run . -v)" --generate-notes "bin/*"
