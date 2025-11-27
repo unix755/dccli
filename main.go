@@ -89,7 +89,7 @@ Example:
 
 	// 打印版本信息
 	if cliVersion {
-		fmt.Println("v1.01")
+		fmt.Println("v1.02")
 		os.Exit(0)
 	}
 
